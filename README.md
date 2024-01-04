@@ -90,4 +90,39 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
         -- header
         -- login form
         -- need to customize login form 
-        
+        -- we are using useRef() to ref fields and we can use the hook 
+               - email = useRef(null)// null is initial value 
+                --<input ref={email} .....>
+        -- created firebase project 
+          -- install firebase and firebase CLI tools using command given on screen 
+          -- Added firebase config in firebase.js file 
+          -- enabled email/password authentication on firebase 
+          -- did firebase init to intialize the project
+          -- created the build using npm run build 
+          -- hosted the app on firebase using firebase deploy 
+
+        -- creating new users when they click on signup 
+         -- need to use firebase auth - folllow decumentation https://firebase.google.com/docs/auth/web/password-auth
+         --  for signUp and login , we will firabase apis 
+         --  and based on that we can show error msg
+
+         --- next task is to create a store and save our users there 
+            -- Steps to do that ---
+                -- npm install react-redux redix-toolkit 
+                --  After that we will create store , for that make a 
+                 userStore.js and we will createStore and slice .
+                -- for creating store , we will use configure store and for 
+                now we will pass reducer as empty array 
+                -- Now we will create user slice in different js file name 
+                users.js
+                -- we will use useEffect and add evenlistner onAuthStateChanged is header cahnge , as this is the component hat will be rendered throughout the application 
+                -- As this Header component will be called multiple times , but we need to add evenlistener only when auth state change happens 
+                -- so we will need to unsubscribe the eventlistener for the cleanup process
+                -- this can be done by returning function that will unsubscribe the added evenlistener 
+                -- by default , auth onAuthStateChanged returns unsubscribe , that can be used .
+            -- Created Constnt.js and moved all constants in there 
+            -- created account of tmdb and got access to token key 
+            -- created nowPlayingMovie slice to store list of results of nowplayingMovies api result 
+
+
+

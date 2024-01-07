@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { addTopRatedMovies } from "../utills/nowPlayingMovieSlice";
-import { API_Options } from "../utills/constants";
+import { API_Options } from "../utills/gptConstants";
 import { useEffect } from "react";
 
 const useTopRatedMovies =  async () =>{

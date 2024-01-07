@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { setLanguageConfig } from '../utills/gptSearchConfigSlice';
 import { languageConfigConst } from '../utills/langConfigConstant';
-import { supportedLanguage } from '../utills/constants';
+import { supportedLanguage } from '../utills/gptConstants';
 const GPTSearchBar = () => {
 
     const languageConfig = useSelector(state=>state.gptConfig.languageConfig)

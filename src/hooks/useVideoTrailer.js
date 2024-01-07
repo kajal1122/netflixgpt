@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { API_Options } from "../utills/constants";
+import { API_Options } from "../utills/gptConstants";
 import { useDispatch } from "react-redux";
 import { addMovieTrailer } from "../utills/nowPlayingMovieSlice";
 const useVideoTrailer = ({movieId})=>{

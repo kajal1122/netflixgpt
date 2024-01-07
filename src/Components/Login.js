@@ -6,7 +6,7 @@ import { auth } from "../utills/firebase";
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utills/users";
-import { netFlixBGImg } from "../utills/constants";
+import { netFlixBGImg } from "../utills/gptConstants";
 const Login = () => {
   const [isSignInPage, setSignInPage] = useState(true);
   const [errorInValidation, setErrorInValidation] = useState(null);

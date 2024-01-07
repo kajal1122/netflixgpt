@@ -5,7 +5,7 @@ import { auth } from '../utills/firebase';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser,removeUser } from '../utills/users';
-import { netflixLogo,netflixUserLogo } from '../utills/constants';
+import { netflixLogo,netflixUserLogo } from '../utills/gptConstants';
 import { showGPTsearch } from '../utills/gptSearchConfigSlice';
 
 const Header = () => {

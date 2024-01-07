@@ -1,6 +1,6 @@
 import React from 'react'
 import GPTSearchBar from './GPTSearchBar';
-import { netFlixBGImg } from '../utills/constants';
+import { netFlixBGImg } from '../utills/gptConstants';
 const GPTSearch = () => {
   return (
     <div>

@@ -12,3 +12,22 @@ export const API_Options = {
   };
 
 export const posterImgPath = "https://image.tmdb.org/t/p/w500/";
+
+export const supportedLanguage = [
+  {
+      lang : 'en',
+      value: 'English'
+  },
+  {
+    lang : 'hi',
+    value : 'Hindi'
+
+  },
+  {
+    lang : 'fr',
+    value: 'French'
+  }
+
+]
+
+const openAIGPTKey = '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';

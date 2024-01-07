@@ -6,9 +6,11 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser,removeUser } from '../utills/users';
 import { netflixLogo,netflixUserLogo } from '../utills/constants';
+import { showGPTsearch } from '../utills/gptSearchConfigSlice';
 
 const Header = () => {
     const loggedInUser = useSelector(state=> state.user.loggedInUser);
+    const gptSearch = useSelector(state=>state.gptConfig.gptSearch)
     console.log('strore coming in header',loggedInUser);
     const navigate = useNavigate();
     const handleSignOutClick = ()=>{
@@ -21,6 +23,10 @@ const Header = () => {
 
     }
     const dispatch = useDispatch();
+
+    const handleGPTSearch = ()=>{
+      dispatch(showGPTsearch())
+    }
 
     useEffect(()=>{
         const unSubscribe = onAuthStateChanged(auth, (user) => {
@@ -48,8 +54,9 @@ const Header = () => {
         <img  className="w-44 mx-auto md:mx-0" src={netflixLogo} alt="netflix-logo" />
         { loggedInUser.uid !== null &&
         <div className='flex p-2 justify-between'>
+            <button className='bg-purple-500 p-2 m-2 rounded-lg text-white fonr-bold' onClick={handleGPTSearch}>{gptSearch === false ? 'GPT Search' : 'Home Page' }</button>
             <img className='w-12 h-12' src={netflixUserLogo} alt="user-logo"/>
-            <button className='bg-white m-2' onClick={handleSignOutClick}>(Sign Out)</button>
+            <button className='bg-white p-2 m-2 rounded-lg font-bold' onClick={handleSignOutClick}>Sign Out</button>
 
         </div>}
     </div>
